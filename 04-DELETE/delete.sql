@@ -1,0 +1,10 @@
+DELETE FROM employes WHERE id_employes > 990;
+
+DELETE FROM employes; -- effacera tout la table.
+
+SUPPRIMER LES EMPLOYES DU SERVICE COMMERCIAL QUI ONT UN SALAIRE INTERIEUR A 2000 ET QUI ONT ETAIENT EMBAUCHE ENTRE 2001 & 2005
+
+DELETE FROM employes WHERE service = 'commercial' AND salaire < 2000 AND year (date_embauche) BETWEEN 2001 And 2005;
+
+
+
