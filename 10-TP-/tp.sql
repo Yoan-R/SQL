@@ -22,11 +22,15 @@ SELECT genre, COUNT(*) AS Nombre_de_logements FROM logement;
 
 5.5 - Affichez les logements à vendre à moins de 150 000 € dans l’ordre croissant des prix
 
-SELECT idLogement, prix FROM logement ORDER BY prix ASC, '150000' DESC;
+SELECT * FROM logement WHERE prix <= '150000' ORDER BY prix ASC;
 
 6.6 - Affichez le nombre de logements à la location (alias : nombre)
 
+SELECT idLogement, ville, categorie FROM logement WHERE categorie = 'location';
+
 7.8 - Affichez le nombre de biens à vendre par ville
+
+SELECT ville, COUNT(genre) AS nombre FROM logement GROUP BY ville;
 
 8.10 - Quels sont les id des logements entre 20 et 30m2
 
